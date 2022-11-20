@@ -1,0 +1,58 @@
+.header{
+	background: $background-header;
+	position: relative;
+	position: -webkit-sticky;
+	position: sticky;
+	top:0;
+	z-index: $z-index-max ;
+	nav{
+		&.filters{
+			display: flex;
+			flex-wrap: nowrap;
+			a{
+				width: 100%;
+				max-width: 200px;
+				padding: $small-separation;
+				margin: $normal-separation $small-separation;
+				margin-right: 0;
+				color: $color-light;
+				text-align: center;
+				font-size: $font-size-normal;
+				background:$background-button;
+				border-radius: $border-radius;
+			}
+			a:last-child{
+				margin-right: 0;
+			}
+			a:hover{
+				color: $color-shiny;
+				font-size: $font-size-normal;
+			}
+		}
+		&.horizontal-scroll{
+			overflow: auto;
+			white-space: nowrap;
+			a{
+				display: inline-block;
+				flex-wrap: wrap;
+				color: $color-light;
+				text-align: center;
+				padding: $normal-separation;
+				padding-right: 0;
+				text-decoration: none;
+				font-size: $font-size-small;
+			}
+			a:last-child{
+				padding-right: $normal-separation;
+			}
+			a::before{
+				font-size: $font-size-big;
+				margin: 0 auto;
+				display: block;
+			}
+			a:hover{
+				color: $color-shiny;
+			}
+		}
+	}
+}

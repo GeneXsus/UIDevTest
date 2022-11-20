@@ -1,24 +1,47 @@
+//z-index
+
+$z-index-max : 10;
+$z-index-0 : 0;
+$z-index-1 : 1;
+$z-index-2 : 2;
+$z-index-3 : 3;
+
 // colors
 $black: #212121;
 $white:#ffffff;
 $grey:#e9eef3;
 $blue:#338ff1;
-$dark-blue:#254cac;
+$blue-dark:#254cac;
+$blue-dark-light:#506fbc;
 $yellow: #ffd11b;
 $yellow-light: #ffe682;
 
 
 //color Used
 $background: $grey;
-$background-header: $dark-blue;
+$background-header: $blue-dark;
 $background-card: $white;
 $background-banner: $blue;
 $background-dot-select: $blue;
+$background-button: $blue-dark-light;
+
 $color: $black; 
 $color-light: $white ;
-$color-banner-highlighted: $yellow;
+$color-shiny: $yellow;
 $color-click: $blue; 
 $highlight: $yellow-light;
 
+// font
+$font-size-normal: 1rem;
+$font-size-small: 0.5rem;
+$font-size-big:1.5rem;
+
+// transformation
+$border-radius: 10px;
+
+
 //Grid
+$container: 1400px;
+$normal-separation: 1rem;
+$small-separation: 0.5rem;
 
