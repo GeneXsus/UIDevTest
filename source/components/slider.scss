@@ -1,0 +1,105 @@
+.section-slider {
+	article {
+		position: relative;
+	}
+
+	.slider-container {
+		position: relative;
+		background-image: url('./assets/img/slider_base-degra.jpg');
+		display: flex;
+		justify-content: center;
+
+		li {
+			opacity: 0;
+			transition: opacity .5s;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			margin: 0 auto;
+			background-repeat: repeat-x;
+			z-index: $z-index-0;
+			@include transition($transition-time,opacity);
+			 @include center-horizontal();
+			
+		   	&:first-child {
+				display: block;
+				position: relative;
+				z-index: $z-index-1;
+				@include reset-center-horizontal;
+			}
+			&.active{
+				opacity: 1;
+				z-index: $z-index-1;
+			}
+			&:target {
+				opacity: 1;
+				z-index: $z-index-1;
+			}
+		}
+
+	
+
+
+		.text-slider{
+			position: absolute;
+			left: $normal-separation;
+			top: $big-separation;
+			h2{
+				font-size: $font-size-big;
+				font-weight: bold;
+			}
+			p{
+
+				font-size: $font-size-normal;
+				mark{
+					font-weight: bold;
+					background-color: $highlight;
+				}
+			}
+
+
+		}
+
+	}
+
+	.nav-slider {
+		position: absolute;
+		bottom: $normal-separation;
+		left: 0;
+		width: 100%;
+		z-index: $z-index-3;
+
+		ul {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+
+			li {
+				display: flex;
+				padding: $dot-separation;
+
+				.dot {
+					width: $dot-size;
+					height: $dot-size;
+					border-radius: 100%;
+					background-color: $background-dot;
+
+					&:hover {
+						background-color: $background-dot-select;
+	
+					}
+					&:active {
+						background-color: $background-dot-select;
+					}
+					&.active{
+						background-color: $background-dot-select;
+					}
+				}
+
+			
+			}
+		}
+
+
+	}
+}

@@ -9,7 +9,9 @@ $z-index-3 : 3;
 // colors
 $black: #212121;
 $white:#ffffff;
-$grey:#e9eef3;
+$white-blue:#e2e7f4;
+$grey:#a5a8ab;
+$grey-light:#e9eef3;
 $blue:#338ff1;
 $blue-dark:#254cac;
 $blue-dark-light:#506fbc;
@@ -18,23 +20,32 @@ $yellow-light: #ffe682;
 
 
 //color Used
-$background: $grey;
+$background: $grey-light;
 $background-header: $blue-dark;
 $background-card: $white;
 $background-banner: $blue;
 $background-dot-select: $blue;
+$background-dot: $grey;
 $background-button: $blue-dark-light;
+
+$border-color: $grey;
 
 $color: $black; 
 $color-light: $white ;
+$color-light-blur: $white-blue;
 $color-shiny: $yellow;
 $color-click: $blue; 
 $highlight: $yellow-light;
 
 // font
-$font-size-normal: 1rem;
-$font-size-small: 0.5rem;
-$font-size-big:1.5rem;
+$icon-size-normal:2rem;
+$icon-chevron-right:2rem;
+$icon-size-small:1.6rem;
+$font-size-super-big:2.3rem;
+$font-size-big:1.2rem;
+$font-size-normal: 1.1rem;
+$font-size-small: 1rem;
+$font-size-super-small: 0.8rem;
 
 // transformation
 $border-radius: 10px;
@@ -42,6 +53,50 @@ $border-radius: 10px;
 
 //Grid
 $container: 1400px;
+$big-separation: 2rem;
 $normal-separation: 1rem;
 $small-separation: 0.5rem;
 
+$dot-separation: 0.2rem;
+$dot-size: 12px;
+
+$max-banner-width: 17rem;
+$max-card-width: 29rem;
+
+$scale:1.2;
+$icon-img:2rem;
+$gap-icon: 0.3rem;
+$number-reparatin: 1.6rem;
+
+
+//time
+$transition-time: 1s;
+
+
+
+//mixin
+
+
+@mixin center-horizontal {
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+}
+@mixin reset-center-horizontal {
+	left: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+@mixin transition ($time , $property:all, $type:ease) {
+	-webkit-transition:$property $time $type; 
+	-moz-transition:$property $time $type; 
+	-o-transition:$property $time $type; 
+	-ms-transition:$property $time $type; 
+}
+
+@mixin transform-scale ($size){
+	-webkit-transform:scale($size);
+	-moz-transform:scale($size);
+	-ms-transform:scale($size);
+	-o-transform:scale($size);
+	transform:scale($size);
+}

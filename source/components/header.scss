@@ -1,10 +1,6 @@
 .header{
 	background: $background-header;
-	position: relative;
-	position: -webkit-sticky;
-	position: sticky;
-	top:0;
-	z-index: $z-index-max ;
+
 	nav{
 		&.filters{
 			display: flex;
@@ -12,21 +8,25 @@
 			a{
 				width: 100%;
 				max-width: 200px;
-				padding: $small-separation;
-				margin: $normal-separation $small-separation;
+				padding: $normal-separation;
+				margin: $normal-separation ;
 				margin-right: 0;
-				color: $color-light;
+				color: $color-light-blur;
 				text-align: center;
 				font-size: $font-size-normal;
 				background:$background-button;
 				border-radius: $border-radius;
 			}
+			a::before{
+				color: $color-light;
+				font-size: $icon-size-normal;
+			}
 			a:last-child{
-				margin-right: 0;
+				margin-right: $small-separation;
 			}
 			a:hover{
 				color: $color-shiny;
-				font-size: $font-size-normal;
+			
 			}
 		}
 		&.horizontal-scroll{
@@ -35,7 +35,7 @@
 			a{
 				display: inline-block;
 				flex-wrap: wrap;
-				color: $color-light;
+				color: $color-light-blur;
 				text-align: center;
 				padding: $normal-separation;
 				padding-right: 0;
@@ -46,12 +46,16 @@
 				padding-right: $normal-separation;
 			}
 			a::before{
-				font-size: $font-size-big;
-				margin: 0 auto;
+				color: $color-light;
+				margin: 0 auto $small-separation auto;
 				display: block;
+				font-size: $icon-size-normal;
 			}
 			a:hover{
 				color: $color-shiny;
+				::before{
+					color: $color-shiny;
+				}
 			}
 		}
 	}

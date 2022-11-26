@@ -1,0 +1,31 @@
+.banner{
+	background: $background-banner;
+	display: flex;
+	justify-content: space-around;
+	margin: $normal-separation;
+	padding: 0 $normal-separation;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	border-radius: $border-radius;
+	align-items: center;
+	width: 100%;
+	.text-banner{
+
+		.white-text{
+			display: block;
+			font-size: $font-size-big;
+			color: $color-light-blur;
+			font-weight: bold;
+		}
+		.shiny-text{
+			display: block;
+			color: $color-shiny;
+			font-size: $font-size-super-big;
+			font-weight: bold;
+		}
+	}
+	.banner-img{
+		width: 50%;
+		max-width: $max-banner-width;
+	}
+}

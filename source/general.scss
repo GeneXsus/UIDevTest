@@ -1,0 +1,44 @@
+body{
+	background: $background;
+}
+.container{
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.hide{
+	display: none;
+}
+
+.icon{
+	width: $icon-img;
+}
+
+.icon-svg{
+	font-size: $icon-img;
+}
+
+.icon-chevron-right{
+	font-size: $icon-chevron-right;
+}
+
+.end-block{
+	display: flex;
+	justify-content: flex-end;
+	justify-self: end;
+	align-items: center;
+}
+
+.text-full{
+	width: 100%;
+}
+
+.cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.card-and-banner{
+	justify-content: start;
+}

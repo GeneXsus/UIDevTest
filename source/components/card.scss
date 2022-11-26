@@ -1,0 +1,127 @@
+.card{
+	padding: $small-separation;
+	max-width: $max-card-width;
+
+	.card-container{
+		overflow: hidden;
+		border-radius: $border-radius;
+		background: $background-card;
+		width: 100%;
+
+		header{
+			width: 100%;
+
+			figure{
+				width: 100%;
+				overflow: hidden;
+
+				img{
+					width: 100%;
+					@include transition($transition-time);
+				}
+			}
+		}
+
+		.card-content{
+			>h2{
+				padding: $normal-separation;
+			}
+			
+			h2{
+				font-size: $font-size-big;
+				font-weight: bold;
+				width: 100%;
+			}
+
+			.text-card{
+				padding: $small-separation $normal-separation;
+				width: 100%;
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: flex-start;
+				
+			}
+
+			.selection-item-list{
+				li{
+					border-bottom: 1px solid $border-color;
+				}
+				.icon{
+					margin-right:  $gap-icon;
+				}
+				.icon-svg{
+					margin-left: -$gap-icon;
+
+				}
+				a{
+					padding: $normal-separation;
+				}
+				.text-full{
+					font-size: $font-size-normal;
+					padding-left: $small-separation;
+				}
+
+				.number{
+					width: $number-reparatin;
+					text-align: center;
+					margin-right: -$gap-icon;
+					
+				}
+			}
+		}
+
+		footer{
+			padding:  $normal-separation;
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			.more{
+				font-size: $font-size-big;
+				text-align: right;
+				color: $color-click
+			}
+			a:hover{
+				color: $color-shiny
+			}
+
+
+		}
+
+	
+
+	}
+
+	a:hover{
+		color: $color-shiny;
+
+		.card-container{
+			figure{
+			
+				img{
+					width: 100%;
+					@include transform-scale($scale);
+				}
+			}
+			
+
+		}
+		
+	
+	}
+
+}
+
+
+.card-collage{
+	
+	.card{
+		flex-basis: 50%;
+	}
+	.card:nth-child(3n+2){
+		padding-right: 0;
+	}
+	.card:nth-child(3n+1){
+		flex-basis: 100%;
+	}
+}
