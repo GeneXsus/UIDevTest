@@ -1,6 +1,9 @@
 .card {
-	padding: $normal-separation;
+	padding: $small-separation;
 	width: 100%;
+	flex-grow: 1;
+	flex: 1 1 $max-card-width;
+
 
 	.card-container {
 		overflow: hidden;
@@ -109,9 +112,12 @@
 	}
 }
 
+.cards-another{
+	padding-bottom: 0;
+}
 
 .card-collage {
-
+	padding-top: 0;
 	.card {
 		flex-basis: 50%;
 	}
@@ -119,11 +125,47 @@
 	.card:nth-child(3n+1) {
 		flex-basis: 100%;
 	}
+	.card:nth-child(3n+2),.card:nth-child(3n+3) {
+		img{
+			aspect-ratio: 120/140;
+			width:100%;
+			object-fit: cover;
+		}
+	}
+}
+@include desktop-tablet() {
+	.card-collage {
+	
+		.card:nth-child(3n+2),.card:nth-child(3n+3) {
+			img{
+				aspect-ratio: unset;
+			
+			}
+		}
+	}
 }
 
 @include desktop() {
 	.card {
+		&:nth-child(1n+4) {
+			max-width: $max-card-width;
+		}
+	}
+}
+ 
 
-		max-width: $max-card-width;
+// Not knowing the size of fonts, this section is so that it fits well on very small devices
+@include small-media {
+	.card-collage {
+
+		.card-container{
+
+			.card-content{
+				
+				h2{
+					font-size: $font-size-normal;
+				}
+			}
+		} 
 	}
 }

@@ -100,7 +100,7 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 
@@ -132,9 +132,10 @@ body {
 }
 
 .cards {
+  padding: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
 }
 
 .card-and-banner {
@@ -227,7 +228,7 @@ body {
 .header nav.filters {
   display: flex;
   flex-wrap: nowrap;
-  max-width: 30rem;
+  max-width: 27rem;
   width: 100%;
   justify-content: space-around;
 }
@@ -246,8 +247,6 @@ body {
   max-width: 13rem;
 }
 .header nav.filters .button div {
-  width: 100%;
-  max-width: 13rem;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -347,7 +346,7 @@ body {
   max-width: 40%;
 }
 .section-slider .slider-container .text-slider h2 {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: bold;
 }
 .section-slider .slider-container .text-slider p {
@@ -409,8 +408,10 @@ body {
   }
 }
 .card {
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
+  flex-grow: 1;
+  flex: 1 1 29.7rem;
 }
 .card .card-container {
   overflow: hidden;
@@ -439,7 +440,7 @@ body {
   padding: 1rem;
 }
 .card .card-container .card-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: bold;
   width: 100%;
 }
@@ -479,7 +480,7 @@ body {
   justify-content: flex-end;
 }
 .card .card-container footer .more {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   text-align: right;
   color: #338ff1;
 }
@@ -498,23 +499,47 @@ body {
   transform: scale(1.2);
 }
 
+.cards-another {
+  padding-bottom: 0;
+}
+
+.card-collage {
+  padding-top: 0;
+}
 .card-collage .card {
   flex-basis: 50%;
 }
 .card-collage .card:nth-child(3n+1) {
   flex-basis: 100%;
 }
+.card-collage .card:nth-child(3n+2) img, .card-collage .card:nth-child(3n+3) img {
+  aspect-ratio: 120/140;
+  width: 100%;
+  object-fit: cover;
+}
 
 @media (min-width: 58rem) {
-  .card {
-    max-width: 29rem;
+  .card-collage .card:nth-child(3n+2) img, .card-collage .card:nth-child(3n+3) img {
+    aspect-ratio: unset;
+  }
+}
+@media (min-width: 1442px) {
+  .card:nth-child(1n+4) {
+    max-width: 29.7rem;
+  }
+}
+@media (max-width: 390px) {
+  .card-collage .card-container .card-content h2 {
+    font-size: 1.1rem;
   }
 }
 .banner {
   background: #338ff1;
   display: flex;
   justify-content: space-around;
-  margin: 1rem;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
   padding: 0 1rem;
   flex-wrap: nowrap;
   overflow: hidden;
@@ -524,7 +549,7 @@ body {
 }
 .banner .text-banner .white-text {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   color: #e2e7f4;
   font-weight: bold;
 }

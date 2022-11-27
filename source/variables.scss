@@ -42,7 +42,7 @@ $icon-chevron-right:2rem;
 $icon-size-small:1.6rem;
 $font-size-super-big-desktop:2.9rem;
 $font-size-super-big:2.3rem;
-$font-size-big:1.2rem;
+$font-size-big:1.18rem;
 $font-size-big-desktop:2.2rem;
 $font-size-normal: 1.1rem;
 $font-size-normal-desktop: 2.1rem;
@@ -54,8 +54,10 @@ $border-radius: 10px;
 
 
 //Grid
-$desktop-width: 58rem;
-$container: 1400px;
+$container: 1450px;
+$desktop-width: 1442px;
+$desktop-tablet-width: 58rem;
+$small-media-width: 390px;
 $big-separation: 2rem;
 $normal-separation: 1rem;
 $small-separation: 0.5rem;
@@ -68,7 +70,7 @@ $max-filter-width: 13rem;
 $max-filter-container-width: 27rem;
 $max-silder-width: 900px;
 $max-banner-width: 17rem;
-$max-card-width: 29rem;
+$max-card-width: 29.7rem;
 
 $scale:1.2;
 $icon-img:2rem;
@@ -117,6 +119,16 @@ $transition-time: 1s;
 
 
 
+@mixin small-media {
+	@media (max-width: #{$small-media-width}) {
+		@content;
+	}
+}
+@mixin desktop-tablet {
+	@media (min-width: #{$desktop-tablet-width}) {
+		@content;
+	}
+}
 @mixin desktop {
 	@media (min-width: #{$desktop-width}) {
 		@content;
