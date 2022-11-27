@@ -70,26 +70,27 @@
 				text-decoration: none;
 				font-size: $font-size-small;
 				font-weight: bold;
-			}
-
-			a:last-child {
-				padding-right: $normal-separation;
-			}
-
-			a::before {
-				color: $color-light;
-				margin: 0 auto $small-separation auto;
-				display: block;
-				font-size: $icon-size-normal;
-			}
-
-			a:hover {
-				color: $color-shiny;
-
-				::before {
+				&:last-child {
+					padding-right: $normal-separation;
+				}
+	
+				&::before {
+					color: $color-light;
+					margin: 0 auto $small-separation auto;
+					display: block;
+					font-size: $icon-size-normal;
+				}
+	
+				&:hover {
 					color: $color-shiny;
+	
+					&::before {
+						color: $color-shiny;
+					}
 				}
 			}
+
+		
 		}
 	}
 }
