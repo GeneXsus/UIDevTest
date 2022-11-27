@@ -1,5 +1,4 @@
 //z-index
-
 $z-index-max : 10;
 $z-index-0 : 0;
 $z-index-1 : 1;
@@ -30,20 +29,23 @@ $background-button: $blue-dark-light;
 
 $border-color: $grey;
 
-$color: $black; 
-$color-light: $white ;
+$color: $black;
+$color-light: $white;
 $color-light-blur: $white-blue;
 $color-shiny: $yellow;
-$color-click: $blue; 
+$color-click: $blue;
 $highlight: $yellow-light;
 
 // font
 $icon-size-normal:2rem;
 $icon-chevron-right:2rem;
 $icon-size-small:1.6rem;
+$font-size-super-big-desktop:2.9rem;
 $font-size-super-big:2.3rem;
 $font-size-big:1.2rem;
+$font-size-big-desktop:2.2rem;
 $font-size-normal: 1.1rem;
+$font-size-normal-desktop: 2.1rem;
 $font-size-small: 1rem;
 $font-size-super-small: 0.8rem;
 
@@ -52,6 +54,7 @@ $border-radius: 10px;
 
 
 //Grid
+$desktop-width: 58rem;
 $container: 1400px;
 $big-separation: 2rem;
 $normal-separation: 1rem;
@@ -60,6 +63,10 @@ $small-separation: 0.5rem;
 $dot-separation: 0.2rem;
 $dot-size: 12px;
 
+
+$max-filter-width: 13rem;
+$max-filter-container-width: 27rem;
+$max-silder-width: 900px;
 $max-banner-width: 17rem;
 $max-card-width: 29rem;
 
@@ -75,28 +82,43 @@ $transition-time: 1s;
 
 
 //mixin
+@mixin box-shadow {
+	-webkit-box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.17);
+	-moz-box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.17);
+	box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.17);
 
+
+}
 
 @mixin center-horizontal {
 	left: 50%;
 	transform: translate3d(-50%, 0, 0);
 }
+
 @mixin reset-center-horizontal {
 	left: 0;
 	transform: translate3d(0, 0, 0);
 }
 
-@mixin transition ($time , $property:all, $type:ease) {
-	-webkit-transition:$property $time $type; 
-	-moz-transition:$property $time $type; 
-	-o-transition:$property $time $type; 
-	-ms-transition:$property $time $type; 
+@mixin transition ($time, $property:all, $type:ease) {
+	-webkit-transition: $property $time $type;
+	-moz-transition: $property $time $type;
+	-o-transition: $property $time $type;
+	-ms-transition: $property $time $type;
 }
 
-@mixin transform-scale ($size){
-	-webkit-transform:scale($size);
-	-moz-transform:scale($size);
-	-ms-transform:scale($size);
-	-o-transform:scale($size);
-	transform:scale($size);
+@mixin transform-scale ($size) {
+	-webkit-transform: scale($size);
+	-moz-transform: scale($size);
+	-ms-transform: scale($size);
+	-o-transform: scale($size);
+	transform: scale($size);
+}
+
+
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
 }

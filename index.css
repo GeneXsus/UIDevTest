@@ -218,30 +218,49 @@ body {
 .header {
   background: #254cac;
 }
+.header .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
 .header nav.filters {
   display: flex;
   flex-wrap: nowrap;
-}
-.header nav.filters a {
+  max-width: 30rem;
   width: 100%;
-  max-width: 200px;
-  padding: 1rem;
+  justify-content: space-around;
+}
+.header nav.filters .button {
+  padding: 0.5rem 1rem;
   margin: 1rem;
   margin-right: 0;
   color: #e2e7f4;
   text-align: center;
   font-size: 1.1rem;
+  font-weight: bold;
   background: #506fbc;
   border-radius: 10px;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 13rem;
 }
-.header nav.filters a::before {
+.header nav.filters .button div {
+  width: 100%;
+  max-width: 13rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.header nav.filters .button ::before {
   color: #ffffff;
   font-size: 2rem;
 }
-.header nav.filters a:last-child {
+.header nav.filters .button:last-child {
   margin-right: 0.5rem;
 }
-.header nav.filters a:hover {
+.header nav.filters .button:hover {
   color: #ffd11b;
 }
 .header nav.horizontal-scroll {
@@ -257,6 +276,7 @@ body {
   padding-right: 0;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: bold;
 }
 .header nav.horizontal-scroll a:last-child {
   padding-right: 1rem;
@@ -276,6 +296,7 @@ body {
 
 .section-slider article {
   position: relative;
+  overflow: hidden;
 }
 .section-slider .slider-container {
   position: relative;
@@ -284,6 +305,8 @@ body {
   justify-content: center;
 }
 .section-slider .slider-container li {
+  max-width: 900px;
+  width: 100%;
   opacity: 0;
   transition: opacity 0.5s;
   position: absolute;
@@ -314,10 +337,14 @@ body {
   opacity: 1;
   z-index: 1;
 }
+.section-slider .slider-container li .slider-img {
+  width: 100%;
+}
 .section-slider .slider-container .text-slider {
   position: absolute;
   left: 1rem;
   top: 2rem;
+  max-width: 40%;
 }
 .section-slider .slider-container .text-slider h2 {
   font-size: 1.2rem;
@@ -362,15 +389,37 @@ body {
   background-color: #338ff1;
 }
 
+@media (min-width: 58rem) {
+  .section-slider .slider-container .text-slider {
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    max-width: 40%;
+  }
+  .section-slider .slider-container .text-slider h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  .section-slider .slider-container .text-slider p {
+    font-size: 2.1rem;
+  }
+  .section-slider .slider-container .text-slider p mark {
+    font-weight: bold;
+    background-color: #ffe682;
+  }
+}
 .card {
-  padding: 0.5rem;
-  max-width: 29rem;
+  padding: 1rem;
+  width: 100%;
 }
 .card .card-container {
   overflow: hidden;
   border-radius: 10px;
   background: #ffffff;
   width: 100%;
+  -webkit-box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.17);
 }
 .card .card-container header {
   width: 100%;
@@ -452,13 +501,15 @@ body {
 .card-collage .card {
   flex-basis: 50%;
 }
-.card-collage .card:nth-child(3n+2) {
-  padding-right: 0;
-}
 .card-collage .card:nth-child(3n+1) {
   flex-basis: 100%;
 }
 
+@media (min-width: 58rem) {
+  .card {
+    max-width: 29rem;
+  }
+}
 .banner {
   background: #338ff1;
   display: flex;
@@ -486,6 +537,15 @@ body {
 .banner .banner-img {
   width: 50%;
   max-width: 17rem;
+}
+
+@media (min-width: 58rem) {
+  .banner .text-banner .white-text {
+    font-size: 2.2rem;
+  }
+  .banner .text-banner .shiny-text {
+    font-size: 2.9rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

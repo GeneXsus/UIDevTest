@@ -1,38 +1,64 @@
-.header{
+.header {
 	background: $background-header;
 
-	nav{
-		&.filters{
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	nav {
+
+		&.filters {
 			display: flex;
 			flex-wrap: nowrap;
-			a{
-				width: 100%;
-				max-width: 200px;
-				padding: $normal-separation;
-				margin: $normal-separation ;
+			max-width: $max-filter-container-width;
+			width: 100%;
+			justify-content: space-around;
+
+			.button {
+				padding: $small-separation $normal-separation;
+				margin: $normal-separation;
 				margin-right: 0;
 				color: $color-light-blur;
 				text-align: center;
 				font-size: $font-size-normal;
-				background:$background-button;
+				font-weight: bold;
+				background: $background-button;
 				border-radius: $border-radius;
-			}
-			a::before{
-				color: $color-light;
-				font-size: $icon-size-normal;
-			}
-			a:last-child{
-				margin-right: $small-separation;
-			}
-			a:hover{
-				color: $color-shiny;
-			
+				white-space: nowrap;
+				width: 100%;
+				max-width: $max-filter-width;
+
+				div {
+					display: flex;
+					flex-wrap: nowrap;
+					justify-content: center;
+					align-items: center;
+				}
+
+				::before {
+					color: $color-light;
+					font-size: $icon-size-normal;
+				}
+
+				&:last-child {
+					margin-right: $small-separation;
+				}
+
+				&:hover {
+					color: $color-shiny;
+
+				}
 			}
 		}
-		&.horizontal-scroll{
+
+		&.horizontal-scroll {
 			overflow: auto;
 			white-space: nowrap;
-			a{
+
+			a {
 				display: inline-block;
 				flex-wrap: wrap;
 				color: $color-light-blur;
@@ -41,19 +67,24 @@
 				padding-right: 0;
 				text-decoration: none;
 				font-size: $font-size-small;
+				font-weight: bold;
 			}
-			a:last-child{
+
+			a:last-child {
 				padding-right: $normal-separation;
 			}
-			a::before{
+
+			a::before {
 				color: $color-light;
 				margin: 0 auto $small-separation auto;
 				display: block;
 				font-size: $icon-size-normal;
 			}
-			a:hover{
+
+			a:hover {
 				color: $color-shiny;
-				::before{
+
+				::before {
 					color: $color-shiny;
 				}
 			}

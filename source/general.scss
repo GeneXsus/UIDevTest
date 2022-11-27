@@ -1,44 +1,45 @@
-body{
+body {
 	background: $background;
 }
-.container{
+
+.container {
 	max-width: 1400px;
 	margin: 0 auto;
 }
 
-.hide{
+.hide {
 	display: none;
 }
 
-.icon{
+.icon {
 	width: $icon-img;
 }
 
-.icon-svg{
+.icon-svg {
 	font-size: $icon-img;
 }
 
-.icon-chevron-right{
+.icon-chevron-right {
 	font-size: $icon-chevron-right;
 }
 
-.end-block{
+.end-block {
 	display: flex;
 	justify-content: flex-end;
 	justify-self: end;
 	align-items: center;
 }
 
-.text-full{
+.text-full {
 	width: 100%;
 }
 
-.cards{
+.cards {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.card-and-banner{
+.card-and-banner {
 	justify-content: start;
 }

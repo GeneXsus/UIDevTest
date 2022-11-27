@@ -1,4 +1,4 @@
-.banner{
+.banner {
 	background: $background-banner;
 	display: flex;
 	justify-content: space-around;
@@ -9,23 +9,43 @@
 	border-radius: $border-radius;
 	align-items: center;
 	width: 100%;
-	.text-banner{
 
-		.white-text{
+	.text-banner {
+
+		.white-text {
 			display: block;
 			font-size: $font-size-big;
 			color: $color-light-blur;
 			font-weight: bold;
 		}
-		.shiny-text{
+
+		.shiny-text {
 			display: block;
 			color: $color-shiny;
 			font-size: $font-size-super-big;
 			font-weight: bold;
 		}
 	}
-	.banner-img{
+
+	.banner-img {
 		width: 50%;
 		max-width: $max-banner-width;
+	}
+}
+
+
+@include desktop() {
+	.banner {
+
+		.text-banner {
+
+			.white-text {
+				font-size: $font-size-big-desktop;
+			}
+
+			.shiny-text {
+				font-size: $font-size-super-big-desktop;
+			}
+		}
 	}
 }

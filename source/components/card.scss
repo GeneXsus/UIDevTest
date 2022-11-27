@@ -1,127 +1,129 @@
-.card{
-	padding: $small-separation;
-	max-width: $max-card-width;
+.card {
+	padding: $normal-separation;
+	width: 100%;
 
-	.card-container{
+	.card-container {
 		overflow: hidden;
 		border-radius: $border-radius;
 		background: $background-card;
 		width: 100%;
+		@include box-shadow();
 
-		header{
+		header {
 			width: 100%;
 
-			figure{
+			figure {
 				width: 100%;
 				overflow: hidden;
 
-				img{
+				img {
 					width: 100%;
 					@include transition($transition-time);
 				}
 			}
 		}
 
-		.card-content{
-			>h2{
+		.card-content {
+			>h2 {
 				padding: $normal-separation;
 			}
-			
-			h2{
+
+			h2 {
 				font-size: $font-size-big;
 				font-weight: bold;
 				width: 100%;
 			}
 
-			.text-card{
+			.text-card {
 				padding: $small-separation $normal-separation;
 				width: 100%;
 				display: flex;
 				flex-wrap: nowrap;
 				align-items: center;
 				justify-content: flex-start;
-				
+
 			}
 
-			.selection-item-list{
-				li{
+			.selection-item-list {
+				li {
 					border-bottom: 1px solid $border-color;
 				}
-				.icon{
-					margin-right:  $gap-icon;
+
+				.icon {
+					margin-right: $gap-icon;
 				}
-				.icon-svg{
+
+				.icon-svg {
 					margin-left: -$gap-icon;
 
 				}
-				a{
+
+				a {
 					padding: $normal-separation;
 				}
-				.text-full{
+
+				.text-full {
 					font-size: $font-size-normal;
 					padding-left: $small-separation;
 				}
 
-				.number{
+				.number {
 					width: $number-reparatin;
 					text-align: center;
 					margin-right: -$gap-icon;
-					
+
 				}
 			}
 		}
 
-		footer{
-			padding:  $normal-separation;
+		footer {
+			padding: $normal-separation;
 			width: 100%;
 			display: flex;
 			justify-content: flex-end;
-			.more{
+
+			.more {
 				font-size: $font-size-big;
 				text-align: right;
 				color: $color-click
 			}
-			a:hover{
+
+			a:hover {
 				color: $color-shiny
 			}
-
-
 		}
-
-	
-
 	}
 
-	a:hover{
+	a:hover {
 		color: $color-shiny;
 
-		.card-container{
-			figure{
-			
-				img{
+		.card-container {
+			figure {
+
+				img {
 					width: 100%;
 					@include transform-scale($scale);
 				}
 			}
-			
-
 		}
-		
-	
 	}
-
 }
 
 
-.card-collage{
-	
-	.card{
+.card-collage {
+
+	.card {
 		flex-basis: 50%;
 	}
-	.card:nth-child(3n+2){
-		padding-right: 0;
-	}
-	.card:nth-child(3n+1){
+
+	.card:nth-child(3n+1) {
 		flex-basis: 100%;
+	}
+}
+
+@include desktop() {
+	.card {
+
+		max-width: $max-card-width;
 	}
 }
