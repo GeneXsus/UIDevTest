@@ -49,7 +49,9 @@
 
 				&:hover {
 					color: $color-shiny;
-
+					div::before {
+						color: $color-shiny;
+					}
 				}
 			}
 		}

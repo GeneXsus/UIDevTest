@@ -88,7 +88,7 @@
 			.more {
 				font-size: $font-size-big;
 				text-align: right;
-				color: $color-click
+				color: $color-click;
 			}
 
 			a:hover {
@@ -133,23 +133,27 @@
 		}
 	}
 }
-@include desktop-tablet() {
-	.card-collage {
-	
-		.card:nth-child(3n+2),.card:nth-child(3n+3) {
-			img{
-				aspect-ratio: unset;
-			
-			}
-		}
-	}
-}
+
 
 @include desktop() {
 	.card {
 		&:nth-child(1n+4) {
 			max-width: $max-card-width;
 		}
+	}
+}
+@include desktop-tablet() {
+	.card-collage {
+		.card{
+			max-width: unset;
+			&:nth-child(3n+2),&:nth-child(3n+3) {
+				img{
+					aspect-ratio: unset;
+				
+				}
+			}
+		} 
+	
 	}
 }
  
@@ -161,7 +165,7 @@
 		.card-container{
 
 			.card-content{
-				
+
 				h2{
 					font-size: $font-size-normal;
 				}

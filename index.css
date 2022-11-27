@@ -262,6 +262,9 @@ body {
 .header nav.filters .button:hover {
   color: #ffd11b;
 }
+.header nav.filters .button:hover div::before {
+  color: #ffd11b;
+}
 .header nav.horizontal-scroll {
   overflow: auto;
   white-space: nowrap;
@@ -518,14 +521,17 @@ body {
   object-fit: cover;
 }
 
-@media (min-width: 58rem) {
-  .card-collage .card:nth-child(3n+2) img, .card-collage .card:nth-child(3n+3) img {
-    aspect-ratio: unset;
-  }
-}
 @media (min-width: 1442px) {
   .card:nth-child(1n+4) {
     max-width: 29.7rem;
+  }
+}
+@media (min-width: 58rem) {
+  .card-collage .card {
+    max-width: unset;
+  }
+  .card-collage .card:nth-child(3n+2) img, .card-collage .card:nth-child(3n+3) img {
+    aspect-ratio: unset;
   }
 }
 @media (max-width: 390px) {
